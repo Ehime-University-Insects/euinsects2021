@@ -10,6 +10,7 @@
  License URI:  https://www.gnu.org/licenses/gpl-3.0.html
 */
 
+
 .site-title, .site-title > a,
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 .site-footer > .site-info .site-name {
@@ -18,11 +19,33 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 .site-title, .site-title > a {
 	font-weight: bold;
 }
+.flexbox {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: var(--responsive--alignwide-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+.flexbox article {
+	width: 42%;
+	margin: 0 4%;
+}
+
+@media only screen and (max-width: 481px) {
+	.flexbox {
+		display: block;
+	}
+	.flexbox article {
+		width: inherit;
+		margin: inherit;
+	}
+}
+
+
 
 
 @media ( min-width: 700px ) {
-	h1,
-	.heading-size-1 {
+	h1.page-title {
 		font-size: 4.8rem;
 	}
 
@@ -51,9 +74,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 		font-size: 1.8rem;
 	}
 
-	h2.entry-title {
+	/* h2.entry-title {
 		font-size: 4.2rem;
-	}
+	} */
 }
 
 .category .archive-header {
