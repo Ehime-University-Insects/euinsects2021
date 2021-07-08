@@ -10,10 +10,15 @@
  License URI:  https://www.gnu.org/licenses/gpl-3.0.html
 */
 
-.site-title {
-  color: red;
-  font-weight: bold;
+.site-title, .site-title > a,
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
+.site-footer > .site-info .site-name {
+	font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+.site-title, .site-title > a {
+	font-weight: bold;
+}
+
 
 @media ( min-width: 700px ) {
 	h1,

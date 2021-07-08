@@ -40,15 +40,15 @@ add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles', 11);
 // 	}
 // }
 
-// /** Google fonts
-//  */
-// function euinsects_custom_fonts() {
-// 	wp_enqueue_style(
-// 		'my_custom_fonts',
-// 		'https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:wght@400;700&display=swap'
-// 	);
-// }
-// add_action( 'wp_enqueue_scripts', 'euinsects_custom_fonts' );
+/** Google fonts
+ */
+function euinsects_custom_fonts() {
+	wp_enqueue_style(
+		'my_custom_fonts',
+		'https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:wght@400;700&display=swap'
+	);
+}
+add_action( 'wp_enqueue_scripts', 'euinsects_custom_fonts' );
 
 // /** Custom colors */
 // function twentytwenty_accent_accessible_colors_fallback( $value ) {
