@@ -30,6 +30,16 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 	width: 42%;
 	margin: 0 4%;
 }
+.post-thumbnail .wp-post-image {
+	margin-top: 0;
+}
+.home.singular .has-post-thumbnail .entry-header {
+	max-width: 100vw;
+	background-color: #feffe5;
+	padding-bottom: 0;
+	margin-bottom: calc(1.3 * var(--global--spacing-vertical));
+}
+
 
 @media only screen and (max-width: 481px) {
 	.flexbox {
@@ -38,6 +48,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 	.flexbox article {
 		width: inherit;
 		margin: inherit;
+	}
+	.menu-button-container {
+		width: 45vw;
+	}
+	.home .entry-header .post-thumbnail {
+		width: 100vw;
+		max-width: 100vw;
 	}
 }
 
@@ -206,10 +223,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 			padding: 0;
 	}
 }
-.singular .entry-header {
+/* .singular .entry-header {
 	background-color: #fff;
 	padding: 0;
-}
+} */
 
 /* FEATURE IMAGE */
 .featured-media.front-page img {
