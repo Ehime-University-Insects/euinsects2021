@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying category pages
+ * The template for displaying tag pages
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
