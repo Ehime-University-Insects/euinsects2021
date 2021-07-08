@@ -16,8 +16,48 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 .site-footer > .site-info .site-name {
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+
+/* header */
+.site-header {
+	padding-top: var(--global--spacing-vertical);
+	padding-bottom: calc(var(--global--spacing-vertical) / 2);
+	display: block;
+}
 .site-title, .site-title > a {
 	font-weight: bold;
+	margin-bottom: calc(var(--global--spacing-vertical) / 2);
+	font-size: 30px;
+}
+@media only screen and (min-width: 1024px) {
+	/* .admin-bar .primary-navigation {
+		max-width: calc(100% - 250px);
+	} */
+}
+@media only screen and (min-width: 482px) {
+	.primary-navigation {
+		/* border-top: 4px dotted #549b35; */
+		/* padding-top: calc(var(--global--spacing-vertical) / 2); */
+	}
+	.primary-navigation .primary-menu-container > ul > .menu-item::after {
+		content: '/';
+		font-size: 0.7em;
+    color: #549b35;
+    transform: translateY(10px);
+	}
+	.primary-navigation a {
+		font-size: 0.9em;
+		padding: 0.6em 0;
+	}
+}
+@media only screen and (max-width: 481px) {
+	.menu-button-container {
+		width: 45vw;
+	}
+}
+
+/* layout */
+.site-main {
+	padding-top: 0;
 }
 .flexbox {
 	display: flex;
@@ -33,14 +73,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 .post-thumbnail .wp-post-image {
 	margin-top: 0;
 }
-.home.singular .has-post-thumbnail .entry-header {
-	max-width: 100vw;
-	background-color: #feffe5;
-	padding-bottom: 0;
-	margin-bottom: calc(1.3 * var(--global--spacing-vertical));
-}
-
-
 @media only screen and (max-width: 481px) {
 	.flexbox {
 		display: block;
@@ -49,14 +81,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 		width: inherit;
 		margin: inherit;
 	}
-	.menu-button-container {
-		width: 45vw;
-	}
+}
+
+/* home */
+.home.singular .has-post-thumbnail .entry-header {
+	max-width: 100vw;
+	background-color: #feffe5;
+	padding-bottom: 0;
+	margin-bottom: calc(1.3 * var(--global--spacing-vertical));
+}
+@media only screen and (max-width: 481px) {
 	.home .entry-header .post-thumbnail {
 		width: 100vw;
 		max-width: 100vw;
 	}
 }
+
 
 
 
