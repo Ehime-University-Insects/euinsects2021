@@ -17,7 +17,7 @@ function my_theme_enqueue_styles()
         $theme->get('Version')
     );
 }
-add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles', PHP_INT_MAX);
+add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles', 11);
 
 // /** Category list
 //  */
