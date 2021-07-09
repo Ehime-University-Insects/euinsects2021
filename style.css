@@ -21,7 +21,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 .site-header {
 	padding-top: var(--global--spacing-vertical);
 	padding-bottom: calc(var(--global--spacing-vertical) / 2);
-	display: block;
+	/* display: block; */
+	max-width: 90vw;
 }
 .site-title, .site-title > a {
 	font-weight: bold;
@@ -29,21 +30,39 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 	font-size: 30px;
 }
 @media only screen and (min-width: 1024px) {
-	/* .admin-bar .primary-navigation {
-		max-width: calc(100% - 250px);
-	} */
+	.primary-navigation {
+		/* max-width: calc(100% - 250px); */
+		margin-left: 2em;
+	}
+	.site-header {
+		/* max-width: none;
+		display: block; */
+		flex-wrap: nowrap;
+	}
 }
 @media only screen and (min-width: 482px) {
+	.site-title, .site-title > a {
+		white-space: nowrap;
+	}
 	.primary-navigation {
 		/* border-top: 4px dotted #549b35; */
 		/* padding-top: calc(var(--global--spacing-vertical) / 2); */
 	}
-	.primary-navigation .primary-menu-container > ul > .menu-item::after {
+	.primary-navigation .primary-menu-container > ul > .menu-item::before {
+		content: '';
+		display: block;
+		width: 10px;
+		height: 10px;
+		border-radius: 100%;
+    background: #549b35;
+    transform: translate(50%, 16px);
+	}
+	/* .primary-navigation .primary-menu-container > ul > .menu-item::after {
 		content: '/';
 		font-size: 0.7em;
     color: #549b35;
     transform: translateY(10px);
-	}
+	} */
 	.primary-navigation a {
 		font-size: 0.9em;
 		padding: 0.6em 0;
@@ -90,6 +109,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 	padding-bottom: 0;
 	margin-bottom: calc(1.3 * var(--global--spacing-vertical));
 }
+.home .entry-header .post-thumbnail {
+	width: 90vw;
+	max-width: 90vw;
+}
 @media only screen and (max-width: 481px) {
 	.home .entry-header .post-thumbnail {
 		width: 100vw;
@@ -97,13 +120,43 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 	}
 }
 
+/* page */
+.page-header {
+	background-image: url(images/bg_page.jpg);
+	background-size: cover;
+	background-position: center center;
+	max-width: 90vw;
+	border-bottom: none;
+	padding-top: calc(1.3 * var(--global--spacing-vertical));
+	padding-bottom: calc(1.3 * var(--global--spacing-vertical));
+}
+.page-title {
+	text-align: center;
+}
 
+.page-title::before,
+.home .cat-title::before {
+	width: 55px;
+	height: 55px;
+	content: '';
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.category-entomology .page-title::before,
+.category-entomology .entry-categories-inner a::before,
+.home h2.cat-entomology::before {
+	background-image: url(images/icon_cat_entomology.png);
+}
 
 
 
 @media ( min-width: 700px ) {
 	h1.page-title {
-		font-size: 4.8rem;
+		font-size: 3.2rem;
 	}
 
 	h2,
