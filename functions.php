@@ -19,6 +19,13 @@ function my_theme_enqueue_styles()
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles', 11);
 
+add_filter('get_the_archive_title', function ($title) {
+    if (is_category()) {
+        $title = single_cat_title('', false);
+    }
+    return $title;
+});
+
 // /** Category list
 //  */
 // function get_category_titles( $cat, $showposts = 5 ) {
