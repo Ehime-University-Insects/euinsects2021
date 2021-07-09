@@ -35,7 +35,7 @@ a {
 }
 @media only screen and (min-width: 1024px) {
 	.primary-navigation {
-		margin-left: 2em;
+		margin-left: 3.5rem;
 	}
 	.site-header {
 		flex-wrap: nowrap;
@@ -139,6 +139,10 @@ a {
 	background-repeat: no-repeat;
 }
 
+.category-info .page-title::before,
+.home h2.cat-info::before {
+	background-image: url(images/icon_cat_info.png);
+}
 .category-entomology .page-title::before,
 .home h2.cat-entomology::before {
 	background-image: url(images/icon_cat_entomology.png);
@@ -166,6 +170,18 @@ a {
 .category-museum .page-title::before,
 .home h2.cat-museum::before {
 	background-image: url(images/icon_cat_museum.png);
+}
+.category-dangerous .page-title::before,
+.home h2.cat-dangerous::before {
+	background-image: url(images/icon_cat_dangerous.png);
+}
+.category-beetles .page-title::before,
+.home h2.cat-beetles::before {
+	background-image: url(images/icon_cat_beetles.png);
+}
+.category-favorite .page-title::before,
+.home h2.cat-favorite::before {
+	background-image: url(images/icon_cat_favorite.png);
 }
 
 
