@@ -13,7 +13,8 @@
 
 .site-title, .site-title > a,
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
-.site-footer > .site-info .site-name {
+.site-footer > .site-info .site-name,.primary-navigation a,
+.archive-description {
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
@@ -21,13 +22,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 .site-header {
 	padding-top: var(--global--spacing-vertical);
 	padding-bottom: calc(var(--global--spacing-vertical) / 2);
-	/* display: block; */
-	max-width: 90vw;
+	width: 90vw;
+	max-width: 3000px;
 }
 .site-title, .site-title > a {
 	font-weight: bold;
-	margin-bottom: calc(var(--global--spacing-vertical) / 2);
-	font-size: 30px;
+	margin-bottom: calc(var(--global--spacing-vertical) / 4);
 }
 @media only screen and (min-width: 1024px) {
 	.primary-navigation {
@@ -127,11 +127,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 	background-position: center center;
 	max-width: 90vw;
 	border-bottom: none;
-	padding-top: calc(1.3 * var(--global--spacing-vertical));
-	padding-bottom: calc(1.3 * var(--global--spacing-vertical));
+	padding-top: calc(2 * var(--global--spacing-vertical));
+	padding-bottom: calc(2 * var(--global--spacing-vertical));
 }
 .page-title {
 	text-align: center;
+	text-shadow: #fff 1px 1px 4px, #fff -1px 1px 4px,#fff 1px -1px 4px, #fff -1px -1px 4px;
 }
 
 .page-title::before,
@@ -147,16 +148,54 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 }
 
 .category-entomology .page-title::before,
-.category-entomology .entry-categories-inner a::before,
 .home h2.cat-entomology::before {
 	background-image: url(images/icon_cat_entomology.png);
+}
+.category-pretty .page-title::before,
+.home h2.cat-pretty::before {
+	background-image: url(images/icon_cat_pretty.png);
+}
+.category-beautiful .page-title::before,
+.home h2.cat-beautiful::before {
+	background-image: url(images/icon_cat_beautiful.png);
+}
+.category-world .page-title::before,
+.home h2.cat-world::before {
+	background-image: url(images/icon_cat_world.png);
+}
+.category-specimen .page-title::before,
+.home h2.cat-specimen::before {
+	background-image: url(images/icon_cat_specimen.png);
+}
+.category-collecting .page-title::before,
+.home h2.cat-collecting::before {
+	background-image: url(images/icon_cat_collecting.png);
+}
+.category-museum .page-title::before,
+.home h2.cat-museum::before {
+	background-image: url(images/icon_cat_museum.png);
+}
+
+
+.archive-description {
+	background: rgba(255,255,255,0.8);
+	padding: 0.7em 1em;
+	border-radius: 7px;
+	font-size: 1.2rem;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	width: 80%;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
 
-@media ( min-width: 700px ) {
+@media ( min-width: 482px ) {
 	h1.page-title {
-		font-size: 3.2rem;
+		font-size: 2.5rem;
+		font-weight: bold;
 	}
 
 	h2,
@@ -189,35 +228,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 	} */
 }
 
-.category .archive-header {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-}
-.category-entomology .archive-header {
-	background-image: url(/wp-content/themes/euinsects2020/images/category_entomology.png);
-}
-.category-pretty .archive-header {
-	background-image: url(/wp-content/themes/euinsects2020/images/category_pretty.png);
-}
-.category-fluffy .archive-header {
-	background-image: url(/wp-content/themes/euinsects2020/images/category_fluffy.png);
-}
-.category-specimen .archive-header {
-	background-image: url(/wp-content/themes/euinsects2020/images/category_specimen.png);
-}
-.category-world .archive-header {
-	background-image: url(/wp-content/themes/euinsects2020/images/category_world.png);
-}
-.category-field .archive-header {
-	background-image: url(/wp-content/themes/euinsects2020/images/category_field.png);
-}
-.category-beautiful .archive-header {
-	background-image: url(/wp-content/themes/euinsects2020/images/category_beautiful.png);
-}
-.category-museum .archive-header {
-	background-image: url(/wp-content/themes/euinsects2020/images/category_museum.png);
-}
+
+
+
+
+
+
+
 
 .section-inner.thin {
 	max-width: 58rem;
@@ -232,67 +249,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 	letter-spacing: 0.05em;
 }
 
-.category-banner-radius::before,
-.home .cat-title::before {
-	width: 55px;
-	height: 55px;
-	content: '';
-	display: inline-block;
-	margin-right: 10px;
-	vertical-align: middle;
-	background-size: contain;
-	background-repeat: no-repeat;
-}
 
-.category-entomology .category-banner-radius::before,
-.category-entomology .entry-categories-inner a::before,
-.home h2.cat-entomology::before {
-	background-image: url(images/icon_cat_entomology.png);
-}
-.category-pretty .category-banner-radius::before,
-.category-pretty .entry-categories-inner a::before,
-.home h2.cat-pretty::before {
-	background-image: url(images/icon_cat_pretty.png);
-}
-.category-beautiful .category-banner-radius::before,
-.category-beautiful .entry-categories-inner a::before,
-.home h2.cat-beautiful::before {
-	background-image: url(images/icon_cat_beautiful.png);
-}
-.category-fluffy .category-banner-radius::before,
-.category-fluffy .entry-categories-inner a::before,
-.home h2.cat-fluffy::before {
-	background-image: url(images/icon_cat_fluffy.png);
-}
-.category-world .category-banner-radius::before,
-.category-world .entry-categories-inner a::before,
-.home h2.cat-world::before {
-	background-image: url(images/icon_cat_world.png);
-}
-.category-specimen .category-banner-radius::before,
-.category-specimen .entry-categories-inner a::before,
-.home h2.cat-specimen::before {
-	background-image: url(images/icon_cat_specimen.png);
-}
-.category-field .category-banner-radius::before,
-.category-field .entry-categories-inner a::before,
-.home h2.cat-field::before {
-	background-image: url(images/icon_cat_field.png);
-}
-.category-museum .category-banner-radius::before,
-.category-museum .entry-categories-inner a::before,
-.home h2.cat-museum::before {
-	background-image: url(images/icon_cat_museum.png);
-}
-
-.category-subtitle {
-	background: rgba(255,255,255,0.8);
-	padding: 0.7em 1em;
-	border-radius: 7px;
-	font-size: 1.8rem;
-	text-align: justify;
-	text-justify: inter-ideograph;
-}
 
 .entry-categories a {
 	border-bottom: none;
