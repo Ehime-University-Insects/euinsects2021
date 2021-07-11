@@ -106,6 +106,10 @@ a {
 	width: 90vw;
 	max-width: 90vw;
 }
+.wp-block-latest-posts:not(.is-grid) > li {
+	margin-top: var(--global--spacing-vertical);
+	margin-bottom: var(--global--spacing-vertical);
+}
 @media only screen and (max-width: 481px) {
 	.home .entry-header .post-thumbnail {
 		width: 100vw;
