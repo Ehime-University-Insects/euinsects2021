@@ -28,10 +28,11 @@ add_filter('get_the_archive_title', function ($title) {
 
 /** Google fonts
  */
-function euinsects_custom_fonts() {
-	wp_enqueue_style(
-		'my_custom_fonts',
-		'https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:wght@400;700&display=swap'
-	);
+function euinsects_custom_fonts()
+{
+    wp_enqueue_style(
+        'my_custom_fonts',
+        'https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:wght@400;700&display=swap'
+    );
 }
-add_action( 'wp_enqueue_scripts', 'euinsects_custom_fonts' );
+add_action('wp_enqueue_scripts', 'euinsects_custom_fonts');
