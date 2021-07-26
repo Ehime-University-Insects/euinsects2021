@@ -187,6 +187,9 @@ a {
 .home h2.cat-favorite::before {
 	background-image: url(images/icon_cat_favorite.png);
 }
+.home h2.page-guidetour::before {
+	background-image: url(images/icon_guidetour.png);
+}
 
 
 .archive-description {
