@@ -303,3 +303,14 @@ h1.page-title {
 .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
   background-color: #549B35;
 }
+
+/* button border-radius */
+.site .button,
+button,
+input[type=submit],
+input[type=reset],
+.wp-block-search .wp-block-search__button,
+.wp-block-button .wp-block-button__link,
+.wp-block-file a.wp-block-file__button {
+  border-radius: 10px;
+}
