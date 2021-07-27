@@ -133,7 +133,7 @@ a {
 }
 .page-title::before,
 .home .cat-title::before,
-.page-id-606 .entry-title::before {
+.guidetour2021 .entry-title::before {
 	width: 55px;
 	height: 55px;
 	content: '';
@@ -188,7 +188,7 @@ a {
 .home h2.cat-favorite::before {
 	background-image: url(images/icon_cat_favorite.png);
 }
-.page-id-606 .entry-title::before,
+.guidetour2021 .entry-title::before,
 .home h2.page-guidetour::before {
 	background-image: url(images/icon_guidetour.png);
 }

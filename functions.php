@@ -36,3 +36,13 @@ function euinsects_custom_fonts()
     );
 }
 add_action('wp_enqueue_scripts', 'euinsects_custom_fonts');
+
+add_filter('body_class', 'add_page_slug_class_name');
+function add_page_slug_class_name($classes)
+{
+    if (is_page()) {
+        $page = get_post(get_the_ID());
+        $classes[] = $page->post_name;
+    }
+    return $classes;
+}
