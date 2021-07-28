@@ -244,15 +244,6 @@ h1.page-title {
 	}
 }
 
-
-
-
-
-
-
-
-
-
 /* avatar caption */
 .wp-block-image .alignright > figcaption {
 	text-align: center;
@@ -318,4 +309,12 @@ input[type=reset],
 .wp-block-button .wp-block-button__link,
 .wp-block-file a.wp-block-file__button {
   border-radius: 10px;
+}
+
+.site-main > article > .entry-footer {
+  padding-bottom: calc(1 * var(--global--spacing-vertical));
+}
+
+.widget-area {
+  margin-top: calc(1 * var(--global--spacing-vertical));
 }
