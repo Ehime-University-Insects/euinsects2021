@@ -298,6 +298,8 @@ h1.page-title {
 .wp-block-button:not(.is-style-outline)
 .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
   background-color: #549B35;
+  font-weight: bold;
+  color: white;
 }
 
 /* button border-radius */
