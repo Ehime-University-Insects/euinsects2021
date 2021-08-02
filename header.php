@@ -14,8 +14,10 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?> <?php twentytwentyone_the_html_classes(); ?>>
-<head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+
+<head prefix="og: http://ogp.me/ns#">
+
+    <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
